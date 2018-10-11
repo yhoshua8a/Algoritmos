@@ -28,22 +28,22 @@ function maxChar(str) {
 */
 
 function maxChar(str) {
-    const charsMap = {};
-    let maxChar = '';
-    let maxNumber = 0;
+  const charsMap = {};
+  let maxChar = "";
+  let maxNumber = 0;
 
-    for(let char of str){
-      charsMap[char] = charsMap[char] + 1 || 1;
+  for (let char of str) {
+    charsMap[char] = charsMap[char] + 1 || 1;
+  }
+
+  for (let key in charsMap) {
+    if (charsMap[key] > maxNumber) {
+      maxNumber = charsMap[key];
+      maxChar = key;
     }
+  }
 
-    for(let key in charsMap){
-        if(charsMap[key] > maxNumber){
-           maxNumber = charsMap[key];
-           maxChar = key;
-        }
-    }
-
-    return maxChar;
+  return maxChar;
 }
 
 module.exports = maxChar;

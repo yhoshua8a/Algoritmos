@@ -14,9 +14,11 @@
 }*/
 
 function palindrome(str) {
-    const array = str.split('');
+  const array = str.split("");
 
-    return array.every((element, index) => element === str[str.length - index - 1]);
+  return array.every(
+    (element, index) => element === str[str.length - index - 1]
+  );
 }
 
 module.exports = palindrome;

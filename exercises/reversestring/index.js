@@ -25,8 +25,8 @@ function reverse(str) {
 }
 */
 function reverse(str) {
-    const array = str.split('');
-    return array.reduce((reversed, character) => character + reversed);
+  const array = str.split("");
+  return array.reduce((reversed, character) => character + reversed);
 }
 
 module.exports = reverse;
